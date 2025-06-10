@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="130"
+   height="130"
+   viewBox="0 0 130 130"
+   fill="none"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="mountain-white.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="8.4230769"
+     inkscape:cx="65.059361"
+     inkscape:cy="65"
+     inkscape:window-width="2560"
+     inkscape:window-height="1334"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <path
+     d="M43.55 71.0125L52.4875 77.025L65 70.6875L77.5125 77.025L86.125 71.3375L79.625 58.5H49.725L43.55 71.0125ZM20.9625 117H108.875L91.975 83.0375L78.4875 91.975L65 85.3125L51.5125 91.975L37.7 82.875L20.9625 117ZM0 130L41.6 45.5H58.5V0H104L97.5 13L104 26H71.5V45.5H87.75L130 130H0Z"
+     fill="#0A0C0C"
+     id="path1"
+     style="fill:#ffffff" />
+</svg>

@@ -64,7 +64,7 @@ main {
   overflow: hidden;
 }
 
-.cajaImagenTexto {
+.boxWithImageAndText {
   width: 92%;
   padding: 10px;
   display: flex;
@@ -73,7 +73,7 @@ main {
   /* Ajusta este valor según lo necesites */
 }
 
-.cajaImagenTexto>div {
+.boxWithImageAndText>div {
   width: 50%;
   /* Distribuye el ancho equitativamente */
   display: flex;
@@ -84,7 +84,7 @@ main {
   /* Añade un margen de 10px alrededor de cada div */
 }
 
-.cajaImagenTexto>.imagenContainer {
+.boxWithImageAndText>.imageContainer {
   overflow: hidden;
   /* Previene que la imagen sobresalga */
   display: flex;
@@ -92,7 +92,7 @@ main {
   align-items: center;
 }
 
-.cajaImagenTexto img {
+.boxWithImageAndText img {
   max-width: 100%;
   max-height: 100%;
   width: auto;
@@ -102,7 +102,7 @@ main {
   display: block;
 }
 
-.cajaImagenTexto figure {
+.boxWithImageAndText figure {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -111,28 +111,28 @@ main {
   align-items: center;
 }
 
-#textoPrincipal {
+#principalTitle {
   font-size: 45px;
   width: 80%;
 }
 
-#boton1 {
+#button1 {
   background-color: #ea5a4c;
-  width: 12%;
+  width: 85px;
   border-radius: 15px;
   color: white;
   padding: 5px 10px;
 }
 
-#palabraSuperar {
+#superar {
   color: #2AB5B8;
 }
 
-#palabraAdiccion {
+#adiccion {
   color: #EA5A4C;
 }
 
-.cajaVerde {
+.greenBox {
   margin-top: 10px;
   width: 100%;
   background: linear-gradient(to bottom, #C3D973, #7D8C45);
@@ -148,24 +148,24 @@ main {
   /* Añadido para que el padding no aumente la altura total */
 }
 
-.cajaVerde p:first-child {
+.greenBox p:first-child {
   font-size: 25px;
   font-weight: bold;
   width: 80%;
 }
 
-.cajaVerde p:nth-child(2) {
+.greenBox p:nth-child(2) {
   font-size: 20px;
 }
 
-.cajaConTarjetas {
+.boxWithCards {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 92%;
 }
 
-.tarjetasContainer {
+.threeCardsContainer {
   width: 100%;
   height: 500px;
   display: flex;
@@ -175,240 +175,62 @@ main {
 }
 
 /* Default styles for all cards (small, black text) */
-.tarjeta {
+.secondaryCard {
   padding: 20px;
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: space-around;
   width: 33%;
-  /* Adjust as needed */
   height: 350px;
-  /* Smaller height */
   text-align: center;
   border: 1px solid black;
   border-radius: 10px;
   transition: all 0.3s ease;
   margin: 5px;
   color: black;
-  /* Default text color */
 }
 
-/* Default style for the middle card (Card 2) - large, white text */
-.tarjetasContainer>div:nth-child(2) {
+.principalCard {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 33%;
   height: 450px;
-  /* Larger height */
-  background: linear-gradient(to bottom, #C3D973, #7D8C45);
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 5px;
   color: white;
-  /* White text */
-}
-
-/* --- Hover Effects --- */
-
-/* When the container is hovered, all cards revert to default small size and black text/background */
-.tarjetasContainer:hover .tarjeta {
-  height: 350px;
-  background: none;
-  color: black;
-}
-
-/* Then, the specific hovered card becomes large with white text/background */
-.tarjetasContainer .tarjeta:hover {
-  height: 450px;
   background: linear-gradient(to bottom, #C3D973, #7D8C45);
-  color: white;
 }
 
-/* Icon color changes when the container is hovered */
-.tarjetasContainer:hover #icono1 {
-  background-color: black;
-  /* Default black when container is hovered */
-}
-
-.tarjetasContainer:hover #icono2 {
-  background-color: black;
-  /* Becomes black when container is hovered */
-}
-
-.tarjetasContainer:hover #icono3 {
-  background-color: black;
-  /* Default black when container is hovered */
-}
-
-/* Icon color changes when a specific card is hovered */
-#tarjeta1:hover #icono1 {
-  background-color: white;
-  /* White when tarjeta1 is hovered */
-}
-
-#tarjeta2:hover #icono2 {
-  background-color: white;
-  /* White when tarjeta2 is hovered */
-}
-
-#tarjeta3:hover #icono3 {
-  background-color: white;
-  /* White when tarjeta3 is hovered */
-}
-
-/* Ensure default state for icons when container is not hovered */
-.tarjetasContainer:not(:hover) #icono1 {
-  background-color: black;
-  /* Icon 1 is black by default */
-}
-
-.tarjetasContainer:not(:hover) #icono2 {
-  background-color: white;
-  /* Icon 2 is white by default */
-}
-
-.tarjetasContainer:not(:hover) #icono3 {
-  background-color: black;
-  /* Icon 3 is black by default */
-}
-
-#icono1 {
+.secondaryCard figure,
+.principalCard figure {
   width: 100px;
   height: 100px;
-  background-color: black;
-  /* Cambia este color para cambiar el color del ícono */
-  -webkit-mask-image: url('images/monta.svg');
-  mask-image: url('images/monta.svg');
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  display: inline-block;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#icono2 {
-  width: 100px;
-  height: 100px;
-  background-color: white;
-  /* Cambia este color para cambiar el color del ícono */
-  -webkit-mask-image: url('images/intimidad.svg');
-  mask-image: url('images/intimidad.svg');
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  display: inline-block;
+.secondaryCard figure img,
+.principalCard figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
-#icono3 {
-  width: 100px;
-  height: 100px;
-  background-color: black;
-  /* Cambia este color para cambiar el color del ícono */
-  -webkit-mask-image: url('images/pies.svg');
-  mask-image: url('images/pies.svg');
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  display: inline-block;
-}
-
-#boton2 {
+#button2 {
   background-color: #ea5a4c;
   width: 13%;
   border-radius: 15px;
   color: white;
   padding: 5px 10px;
-}
-
-.textoContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-#icono4 {
-  width: 100px;
-  height: 100px;
-  background-color: black;
-  /* Cambia este color para cambiar el color del ícono */
-  -webkit-mask-image: url('images/manos.svg');
-  mask-image: url('images/manos.svg');
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  display: inline-block;
-}
-
-#icono5 {
-  width: 100px;
-  height: 100px;
-  background-color: white;
-  /* Cambia este color para cambiar el color del ícono */
-  -webkit-mask-image: url('images/regalo.svg');
-  mask-image: url('images/regalo.svg');
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  display: inline-block;
-}
-
-#icono6 {
-  width: 100px;
-  height: 100px;
-  background-color: black;
-  /* Cambia este color para cambiar el color del ícono */
-  -webkit-mask-image: url('images/colabos.svg');
-  mask-image: url('images/colabos.svg');
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  display: inline-block;
-}
-
-.tarjetasContainer:hover #icono4 {
-  background-color: black;
-  /* Default black when container is hovered */
-}
-
-.tarjetasContainer:hover #icono5 {
-  background-color: black;
-  /* Becomes black when container is hovered */
-}
-
-.tarjetasContainer:hover #icono6 {
-  background-color: black;
-  /* Default black when container is hovered */
-}
-
-/* Icon color changes when a specific card is hovered */
-#tarjeta4:hover #icono4 {
-  background-color: white;
-  /* White when tarjeta1 is hovered */
-}
-
-#tarjeta5:hover #icono5 {
-  background-color: white;
-  /* White when tarjeta2 is hovered */
-}
-
-#tarjeta6:hover #icono6 {
-  background-color: white;
-  /* White when tarjeta3 is hovered */
-}
-
-/* Ensure default state for icons when container is not hovered */
-.tarjetasContainer:not(:hover) #icono4 {
-  background-color: black;
-  /* Icon 1 is black by default */
-}
-
-.tarjetasContainer:not(:hover) #icono5 {
-  background-color: white;
-  /* Icon 2 is white by default */
-}
-
-.tarjetasContainer:not(:hover) #icono6 {
-  background-color: black;
-  /* Icon 3 is black by default */
 }
 
 .subscribe-form-container {
@@ -556,7 +378,7 @@ main {
   width: 80%;
 }
 
-.cardsContainer {
+.twoCardsContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -569,104 +391,6 @@ main {
   display: flex;
   flex-direction: column;
   width: 50%;
-}
-
-/* --- Styles for the two cards within .cardsContainer --- */
-
-/* Base styles for the two cards (common properties) */
-.cardsContainer .tarjeta {
-  width: 48%; /* Adjust width slightly to account for margin */
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  border: 1px solid black;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-  margin: 5px; /* Add some margin between cards */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
-}
-
-/* Default state for tarjeta7 (large/gradient/white) */
-#tarjeta7 {
-  height: 450px;
-  background: linear-gradient(to bottom, #C3D973, #7D8C45);
-  color: white;
-}
-
-/* Default state for tarjeta8 (small/white/black) */
-#tarjeta8 {
-  height: 350px;
-  background-color: white;
-  color: black;
-}
-
-/* Styles for the icons (general properties) */
-#icono7, #icono8 {
-  width: 100px;
-  height: 100px;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  display: inline-block;
-}
-
-/* Specific icon mask images */
-#icono7 {
-  -webkit-mask-image: url('images/man.svg');
-  mask-image: url('images/man.svg');
-}
-#icono8 {
-  -webkit-mask-image: url('images/woman.svg');
-  mask-image: url('images/woman.svg');
-}
-
-/* Default icon colors */
-#tarjeta7 #icono7 { background-color: white; } /* Icon in default large card */
-#tarjeta8 #icono8 { background-color: black; } /* Icon in default small card */
-
-
-/* --- Hover Effects --- */
-
-/* When tarjeta7 is hovered */
-#tarjeta7:hover {
-    /* Stays large/gradient/white - explicitly re-apply for clarity/specificity */
-    height: 450px;
-    background: linear-gradient(to bottom, #C3D973, #7D8C45);
-    color: white;
-}
-#tarjeta7:hover #icono7 { background-color: white; }
-
-/* When tarjeta7 is hovered, make tarjeta8 small/white/black */
-#tarjeta7:hover + #tarjeta8 {
-    height: 350px;
-    background-color: white;
-    color: black;
-}
-#tarjeta7:hover + #tarjeta8 #icono8 { background-color: black; }
-
-
-/* When tarjeta8 is hovered */
-#tarjeta8:hover {
-    /* Becomes large/gradient/white */
-    height: 450px;
-    background: linear-gradient(to bottom, #C3D973, #7D8C45);
-    color: white;
-}
-#tarjeta8:hover #icono8 { background-color: white; }
-
-/* When tarjeta8 is hovered, make tarjeta7 small/white/black */
-/* Using :has() pseudo-class to select a previous sibling based on a later sibling's state */
-/* Note: :has() has good support in modern browsers (Chrome, Edge, Firefox, Safari) */
-.cardsContainer:has(#tarjeta8:hover) #tarjeta7 {
-    height: 350px;
-    background: white; /* Changed from background-color to background */
-    color: black;
-}
-.cardsContainer:has(#tarjeta8:hover) #tarjeta7 #icono7 {
-    background-color: black;
 }
 
 footer {
