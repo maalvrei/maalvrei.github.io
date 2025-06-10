@@ -181,7 +181,7 @@ main {
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  width: 33%;
+  flex:1;
   height: 350px;
   text-align: center;
   border: 1px solid black;
@@ -197,7 +197,7 @@ main {
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  width: 33%;
+  flex:1;
   height: 450px;
   text-align: center;
   border: 1px solid black;
