@@ -1,13 +1,37 @@
-header {
+.homeHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #F4F9F9;
+}
+
+.headerContent {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
-  ;
 }
 
-* {
+.headerText {
+  width: 60%;
+  color: white;
+  border-left: 3px solid white;
+  padding: 40px 40px 40px 35px;
+  margin-bottom: 20px;
+}
+
+.notHomeHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: linear-gradient(to bottom, #C3D973, #7D8C45);
+}
+
+html {
   font-family: poppins, sans-serif;
+  font-size: 28px;
 }
 
 body {
@@ -17,7 +41,6 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  /* Cambiado a min-height */
 }
 
 nav ul {
@@ -30,20 +53,15 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  /* Elimina el subrayado */
   color: black;
-  /* Cambia el color del texto a negro */
-  font-size: small;
+  font-size: 0.55rem;
 }
 
 nav ul li:last-child a {
   background-color: #ea5a4c;
   border-radius: 15px;
-  /* Ajusta el valor según lo necesites */
   color: white;
-  /* Opcional: Cambia el color del texto para que contraste con el fondo */
   padding: 5px 10px;
-  /* Opcional: Añade un poco de padding para que el texto no esté pegado al borde */
 }
 
 nav {
@@ -60,65 +78,68 @@ main {
   align-items: center;
   width: 100%;
   flex: 1;
-  /* Añadido flex: 1 para que main ocupe el espacio restante */
   overflow: hidden;
 }
 
 .boxWithImageAndText {
-  width: 92%;
-  padding: 10px;
+  width: 80%;
   display: flex;
   flex-direction: row;
-  height: 600px;
-  /* Ajusta este valor según lo necesites */
 }
 
-.boxWithImageAndText>div {
-  width: 50%;
-  /* Distribuye el ancho equitativamente */
+.textContainer {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  /* Ocupa todo el alto del section */
+  justify-content: space-between;
+  flex:1;
   margin: 10px;
-  /* Añade un margen de 10px alrededor de cada div */
 }
 
-.boxWithImageAndText>.imageContainer {
-  overflow: hidden;
-  /* Previene que la imagen sobresalga */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.boxWithImageAndText img {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  /* Asegura que la imagen se vea completa sin recortarse */
-  display: block;
+.imageContainer {
+  flex:1;
+  margin: 10px;
 }
 
 .boxWithImageAndText figure {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.boxWithImageAndText figure img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
 #principalTitle {
-  font-size: 45px;
-  width: 80%;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 0.8rem;;
+}
+
+h3 {
+  font-size: 0.60rem;
+}
+
+h4 {
+  font-size: 0.7rem;
+}
+
+p {
+  font-size: 0.6rem;;
 }
 
 #button1 {
   background-color: #ea5a4c;
-  width: 85px;
+  width: 90px;
   border-radius: 15px;
   color: white;
   padding: 5px 10px;
@@ -134,18 +155,16 @@ main {
 
 .greenBox {
   margin-top: 10px;
+  margin-bottom: 10px;
   width: 100%;
   background: linear-gradient(to bottom, #C3D973, #7D8C45);
-  /* Cambiado a gradiente vertical */
   text-align: center;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px 0;
-  /* Añadido padding para dar espacio al contenido */
   box-sizing: border-box;
-  /* Añadido para que el padding no aumente la altura total */
 }
 
 .greenBox p:first-child {
@@ -156,30 +175,27 @@ main {
 
 .greenBox p:nth-child(2) {
   font-size: 20px;
+  width: 80%;
 }
 
 .boxWithCards {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 92%;
-}
-
-section {
-  margin-top: 30px;
-  margin-bottom: 30px;;
+  width: 100%;
+  
 }
 
 .threeCardsContainer {
-  width: 100%;
-  height: 500px;
+  width: 80%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  height: 450px;
+  margin: 30px;
 }
 
-/* Default styles for all cards (small, black text) */
 .secondaryCard {
   padding: 20px;
   display: flex;
@@ -204,10 +220,41 @@ section {
   flex:1;
   height: 450px;
   text-align: center;
-
   border-radius: 10px;
   color: white;
   background: linear-gradient(to bottom, #C3D973, #7D8C45);
+}
+
+.secondaryCard h4 {
+    opacity: 0;
+    height: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.principalCard h4 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+}
+
+.threeCardsContainer > div,
+.twoCardsContainer > div {
+    transition: all 0.5s ease-in-out;
+}
+
+.principalCard p,
+.secondaryCard p {
+  font-size: 0.5rem;
+}
+
+.principalCard h3,
+.secondaryCard h3 {
+  font-size: 0.6rem;
+}
+
+.principalCard h4,
+.secondaryCard h4 {
+  font-size: 0.6rem;
 }
 
 .secondaryCard figure,
@@ -230,7 +277,7 @@ section {
 
 #button2 {
   background-color: #ea5a4c;
-  width: 13%;
+  width: 100px;
   border-radius: 15px;
   color: white;
   padding: 5px 10px;
@@ -238,72 +285,47 @@ section {
 
 .subscribe-form-container {
   display: flex;
-  /* Permite que el input y el botón se alineen horizontalmente */
   border-radius: 30px;
-  /* Bordes redondeados para todo el contenedor */
   overflow: hidden;
-  /* Asegura que los hijos se adapten al borde redondeado */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  /* Sombra sutil */
   width: 100%;
   max-width: 500px;
-  /* Ancho máximo del componente */
 }
 
-/* Estilo para el campo de email */
 .subscribe-form-container input[type="email"] {
   flex-grow: 1;
-  /* El campo de email ocupa el espacio restante */
   padding: 18px 25px;
-  /* Relleno interno (vertical, horizontal) */
   border: none;
-  /* Sin borde */
   outline: none;
-  /* Sin contorno al hacer foco */
   font-size: 16px;
-  /* Tamaño de la fuente */
   background-color: #a7ad8f;
-  /* Tono verde oliva claro para el campo */
   color: #ffffff;
-  /* Color del texto */
 }
 
-/* Estilo para el placeholder del campo de email */
 .subscribe-form-container input[type="email"]::placeholder {
   color: #f0f0f0;
-  /* Color del texto del placeholder (ligeramente más claro) */
   opacity: 1;
-  /* Asegura que sea completamente visible */
 }
 
-/* Estilo para el botón de suscripción */
+li a:hover {
+  color:#EA5A4C
+}
+
 .subscribe-form-container button {
   padding: 18px 30px;
-  /* Relleno interno (vertical, horizontal) */
   border: none;
-  /* Sin borde */
   outline: none;
-  /* Sin contorno al hacer foco */
   background-color: #e87070;
-  /* Color coral/rojo para el botón */
   color: #ffffff;
-  /* Color del texto del botón */
   font-size: 16px;
-  /* Tamaño de la fuente */
   font-weight: bold;
-  /* Texto en negrita */
   cursor: pointer;
-  /* Cursor de tipo puntero */
   white-space: nowrap;
-  /* Evita que el texto del botón se divida en múltiples líneas */
   transition: background-color 0.3s ease;
-  /* Transición suave para el hover */
 }
 
-/* Estilo para el botón al pasar el cursor por encima (hover) */
 .subscribe-form-container button:hover {
   background-color: #d96060;
-  /* Un tono ligeramente más oscuro al hacer hover */
 }
 
 .blog {
@@ -322,40 +344,36 @@ section {
 
 .blogContent {
   display: flex;
-  flex-direction: row; /* Arrange blog posts horizontally */
-  width: 80%; /* Occupy 80% of the parent width */
-  margin: 0 auto; /* Center the blog content */
-  justify-content: space-around; /* Distribute space around items */
-  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  flex-direction: row;
+  width: 80%;
+  justify-content: space-around;
 }
 
 .blogPost {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 15px; /* Adjust margin between posts */
-  flex: 1; /* Allow flex items to grow and shrink */
-  min-width: 200px; /* Optional: minimum width for smaller screens */
-  max-width: 25%; /* Optional: maximum width to ensure 4 per row */
+  flex: 1;
+  margin: 15px;
 }
 
 .blogImage {
-  width: 100%; /* Occupy full width of blogPost */
-  height: 550px; /* Aumenta la altura del contenedor de la imagen */
-  overflow: hidden; /* Hide overflowing parts of the image */
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
 }
 
 .blogPost figure {
   margin: 0;
   padding: 0;
-  width: 100%; /* Ensure figure takes full width */
-  height: 100%; /* Ensure figure takes full height */
+  width: 100%;
+  height: 100%;
 }
 
 .blogPost figure img {
-  width: 100%; /* Image takes full width of figure */
-  height: 100%; /* Image takes full height of figure */
-  object-fit: contain; /* Asegura que la imagen se vea completa sin recortarse */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   display: block;
 }
 
@@ -364,13 +382,13 @@ section {
   flex-direction: column;
   align-items: center;
   text-align: justify;
-  padding: 10px; /* Add some padding inside the text container */
-  flex-grow: 1; /* Allow text to grow and fill space */
+  padding: 10px;
+  flex-grow: 1;
 }
 
 .blogText h3 {
-    margin-top: 10px; /* Add some space above the heading */
-    text-align: center; /* Center the heading text */
+    margin-top: 10px;
+    text-align: center;
 }
 
 .textAndCards {
@@ -378,6 +396,7 @@ section {
   flex-direction: row;
   align-items: center;
   margin-top: 50px;
+  margin-bottom: 50px;
   width: 80%;
 }
 
@@ -385,15 +404,10 @@ section {
   display: flex;
   flex-direction: row;
   align-items: center;
+  height: 450px;
   width: 50%;
-  justify-content: space-between; /* Distribute space between cards */
+  justify-content: space-between;
   margin-left: 50px;
-}
-
-.textContainer {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
 }
 
 footer {
@@ -414,14 +428,14 @@ footer {
 }
 
 .footerLinks ul {
-  list-style-type: none; /* Remove default list bullets */
-  padding: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footerLinks ul li a {
-  text-decoration: none; /* Remove underline from links */
-  color: inherit; /* Inherit color from parent, or set a specific color like black */
+  text-decoration: none;
+  color: inherit;
 }
 
 hr {
@@ -429,23 +443,31 @@ hr {
 }
 
 .footerLogo p {
-  width: 70%;
+
+  width: 60%;
   text-align: justify;
+}
+
+.footerLinks ul li a,
+.footerLinks ul li {
+  text-decoration: none;
+  color: white;
+  font-size: 0.55rem;
 }
 .footerSocialMedia {
   margin-top: 15px;
 }
 
 .footerSocialMedia ul {
-  list-style-type: none; /* Remove default list bullets */
-  padding: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
-  display: flex; /* Assuming you want them in a row */
-  justify-content: center; /* Center the icons if needed */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .footerSocialMedia ul li {
-  margin: 0 10px; /* Add horizontal margin between list items */
+  margin: 0 10px;
 }
 
 .footerText {

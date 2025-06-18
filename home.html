@@ -2,27 +2,28 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <header>
-      <figure>
-        <img src="images/logo-item.svg" alt="Logo" />
-      </figure>
-      <nav>
-        <ul>
-          <li><a href="#" target="_blank">Home</a></li>
-          <li><a href="#" target="_blank">Sobre nosotros</a></li>
-          <li><a href="#" target="_blank">¿Conoces a un adicto?</a></li>
-          <li><a href="#" target="_blank">Colabora</a></li>
-          <li><a href="#" target="_blank">Blog</a></li>
-          <li><a href="#" target="_blank">Preguntas Frecuentes</a></li>
-          <li><a href="#" target="_blank">Contacta con nosotros</a></li>
-        </ul>
-      </nav>
+    <header class="homeHeader">
+      <div class="headerContent">
+        <figure>
+          <img src="images/logo-item.svg" alt="Logo" />
+        </figure>
+        <nav>
+          <ul>
+            <li><a href="#" target="_blank">Home</a></li>
+            <li><a href="#" target="_blank">Sobre nosotros</a></li>
+            <li><a href="#" target="_blank">¿Conoces a un adicto?</a></li>
+            <li><a href="#" target="_blank">Colabora</a></li>
+            <li><a href="#" target="_blank">Blog</a></li>
+            <li><a href="#" target="_blank">Preguntas Frecuentes</a></li>
+            <li><a href="#" target="_blank">Contacta con nosotros</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
       <section class="boxWithImageAndText">
@@ -31,7 +32,7 @@
             ¿Quieres <span id="superar">superar</span> tu
             <span id="adiccion">adicción</span>?
           </h1>
-          <p>Tu proceso importa. Y no tienes que hacerlo solo.</p>
+          <h2>Tu proceso importa. Y no tienes que hacerlo solo.</h2>
           <p>
             Pronto lanzaremos la app de Addict Help, pensada para acompañarte en
             tu recuperación: íntima personalizada y llena de motivación.
@@ -65,53 +66,61 @@
         <p>¿Porqué nosotros?</p>
         <h2>¿Por qué elegir nuestra app para tu recuperación?</h2>
         <h2>Está pensada desde dentro de las adicciones.</h2>
-       <div class="threeCardsContainer">
-    <div class="secondaryCard">
-        <figure>
-            <img src="images/foots-black.svg"
-                 data-black-src="images/foots-black.svg"
-                 data-white-src="images/foots-white.svg"
-                 alt="App en el móvil"/>
-        </figure>
-        <h3>Seguimiento Personalizado</h3>
-        <p>
-            Tu recuperación es única, y así debe ser tu camino. Con la app
-            podrás registrar tus hábitos, avances y emociones, y recibir
-            orientación adaptada a ti. …y, cuando llegue tu momento, te
-            orientamos hacia el recurso profesional que mejor encaje contigo.
-        </p>
-    </div>
-    <div class="principalCard">
-        <figure>
-            <img src="images/privacy-white.svg"
-                 data-black-src="images/privacy-black.svg"
-                 data-white-src="images/privacy-white.svg"
-                 alt="App en el móvil" />
-        </figure>
-        <h3>En la Intimidad</h3>
-        <h4>Porque mereces cuidarte sin sentirte expuesto.</h4>
-        <p>
-            Recupérate a tu ritmo, sin presiones ni miradas ajenas. Nuestra
-            app te ofrece un espacio seguro, confidencial y accesible para
-            trabajar en ti, desde donde estés.
-        </p>
-    </div>
-    <div class="secondaryCard">
-        <figure>
-            <img src="images/mountain-black.svg"
-                 data-black-src="images/mountain-black.svg"
-                 data-white-src="images/mountain-white.svg"
-                 alt="App en el móvil" />
-        </figure>
-        <h3>Motivación Continua</h3>
-        <p>
-            Sabemos que hay días más difíciles que otros. La app te ayuda a
-            mantener viva tu motivación con retos alcanzables, logros que
-            celebran tu esfuerzo, recordatorios positivos y artículos que te
-            inspiran.
-        </p>
-    </div>
-</div>
+        <div class="threeCardsContainer">
+          <div class="secondaryCard">
+            <figure>
+              <img
+                src="images/foots-black.svg"
+                data-black-src="images/foots-black.svg"
+                data-white-src="images/foots-white.svg"
+                alt="App en el móvil"
+              />
+            </figure>
+            <h3>Seguimiento Personalizado</h3>
+            <h4>Estamos contigo en cada paso, sin juzgarte, sin soltarte.</h4>
+            <p>
+              Tu recuperación es única, y así debe ser tu camino. Con la app
+              podrás registrar tus hábitos, avances y emociones, y recibir
+              orientación adaptada a ti. …y, cuando llegue tu momento, te
+              orientamos hacia el recurso profesional que mejor encaje contigo.
+            </p>
+          </div>
+          <div class="principalCard">
+            <figure>
+              <img
+                src="images/privacy-white.svg"
+                data-black-src="images/privacy-black.svg"
+                data-white-src="images/privacy-white.svg"
+                alt="App en el móvil"
+              />
+            </figure>
+            <h3>En la Intimidad</h3>
+            <h4>Porque mereces cuidarte sin sentirte expuesto.</h4>
+            <p>
+              Recupérate a tu ritmo, sin presiones ni miradas ajenas. Nuestra
+              app te ofrece un espacio seguro, confidencial y accesible para
+              trabajar en ti, desde donde estés.
+            </p>
+          </div>
+          <div class="secondaryCard">
+            <figure>
+              <img
+                src="images/mountain-black.svg"
+                data-black-src="images/mountain-black.svg"
+                data-white-src="images/mountain-white.svg"
+                alt="App en el móvil"
+              />
+            </figure>
+            <h3>Motivación Continua</h3>
+            <h4>Pequeños pasos que suman… y transforman.</h4>
+            <p>
+              Sabemos que hay días más difíciles que otros. La app te ayuda a
+              mantener viva tu motivación con retos alcanzables, logros que
+              celebran tu esfuerzo, recordatorios positivos y artículos que te
+              inspiran.
+            </p>
+          </div>
+        </div>
       </section>
       <section class="boxWithImageAndText">
         <div class="imageContainer">
@@ -140,12 +149,15 @@
         <div class="threeCardsContainer">
           <div class="secondaryCard">
             <figure>
-            <img src="images/hands-black.svg"
-                 data-black-src="images/hands-black.svg"
-                 data-white-src="images/hands-white.svg"
-                 alt="App en el móvil"/>
-        </figure>
+              <img
+                src="images/hands-black.svg"
+                data-black-src="images/hands-black.svg"
+                data-white-src="images/hands-white.svg"
+                alt="App en el móvil"
+              />
+            </figure>
             <h3>Voluntariado</h3>
+            <h4>Hay muchas formas de estar presente.</h4>
             <p>
               Tu tiempo y tu talento pueden marcar la diferencia. Infórmate
               sobre cómo colaborar como voluntario en Addict Help y ser parte
@@ -154,11 +166,13 @@
           </div>
           <div class="principalCard">
             <figure>
-            <img src="images/present-black.svg"
-                 data-black-src="images/present-black.svg"
-                 data-white-src="images/present-white.svg"
-                 alt="App en el móvil"/>
-        </figure>
+              <img
+                src="images/present-black.svg"
+                data-black-src="images/present-black.svg"
+                data-white-src="images/present-white.svg"
+                alt="App en el móvil"
+              />
+            </figure>
             <h3>Donaciones</h3>
             <h4>Toda ayuda cuenta. Y suma.</h4>
             <p>
@@ -170,12 +184,15 @@
           </div>
           <div class="secondaryCard">
             <figure>
-            <img src="images/colabos-black.svg"
-                 data-black-src="images/colabos-black.svg"
-                 data-white-src="images/colabos-white.svg"
-                 alt="App en el móvil"/>
-        </figure>
+              <img
+                src="images/colabos-black.svg"
+                data-black-src="images/colabos-black.svg"
+                data-white-src="images/colabos-white.svg"
+                alt="App en el móvil"
+              />
+            </figure>
             <h3>Colaboraciones</h3>
+            <h4>Abrimos caminos sumando esfuerzos.</h4>
             <p>
               Si eres un centro, empresa o entidad comprometida con la salud y
               el bienestar, hablemos. Podemos ser tu aliado en la fase de
@@ -297,11 +314,13 @@
         <div class="twoCardsContainer">
           <div class="principalCard">
             <figure>
-            <img src="images/man-white.svg"
-                 data-black-src="images/man-black.svg"
-                 data-white-src="images/man-white.svg"
-                 alt="App en el móvil"/>
-        </figure>
+              <img
+                src="images/man-white.svg"
+                data-black-src="images/man-black.svg"
+                data-white-src="images/man-white.svg"
+                alt="App en el móvil"
+              />
+            </figure>
             <p>
               Conozco a los 3 y sé que están haciendo un gran trabajo. Son muy
               profesionales y seguro que harán todo lo posible para conseguir
@@ -311,11 +330,13 @@
           </div>
           <div class="secondaryCard">
             <figure>
-            <img src="images/woman-black.svg"
-                 data-black-src="images/woman-black.svg"
-                 data-white-src="images/woman-white.svg"
-                 alt="App en el móvil"/>
-        </figure>
+              <img
+                src="images/woman-black.svg"
+                data-black-src="images/woman-black.svg"
+                data-white-src="images/woman-white.svg"
+                alt="App en el móvil"
+              />
+            </figure>
             <p>
               He visto su plan para la APP y es algo extraordinario. ¡¡Va a
               ayudar a muchísima gente!!
