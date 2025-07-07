@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>Sobre nosotros</title>
     <link rel="stylesheet" href="style.css" />
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.2/lottie.min.js"></script>
   </head>
   <body>
     <header class="notHomeHeader">
@@ -144,7 +145,8 @@
         </div>
         <div class="teamMember">
           <figure>
-            <img src="/images/boyAndShip.svg" />
+            <!-- Reemplazar <img> con un div para la animación Lottie -->
+            <div id="lottie-boyAndShip" style="width: 404px; height: 331px;"></div>
           </figure>
           <div>
             <h2>Miguel Cid</h2>
@@ -170,7 +172,8 @@
         </div>
         <div class="teamMember">
           <figure>
-            <img src="/images/womanAndScreen.svg" />
+            <!-- Reemplazar <img> con un div para la animación Lottie -->
+            <div id="lottie-womanAndScreen" style="width: 404px; height: 331px;"></div>
           </figure>
           <div>
             <h2>María José Fernández</h2>
@@ -202,7 +205,8 @@
         </div>
         <div class="teamMember">
           <figure>
-            <img src="/images/manWithGrafics.svg" />
+            <!-- Reemplazar <img> con un div para la animación Lottie -->
+            <div id="lottie-manWithGrafics" style="width: 404px; height: 331px;"></div>
           </figure>
           <div>
             <h2>Antonio Molina</h2>
@@ -436,5 +440,31 @@
       </div>
     </footer>
     <script src="script.js"></script>
+    <script>
+      // Script para cargar las animaciones Lottie
+      lottie.loadAnimation({
+        container: document.getElementById('lottie-boyAndShip'), // el ID del div contenedor
+        renderer: 'svg', // o 'canvas' o 'html'
+        loop: true, // true para que se repita, false para que se reproduzca una vez
+        autoplay: true, // true para que se reproduzca automáticamente al cargar
+        path: 'images/ilustra_miguel.json' // la ruta a tu archivo .json
+      });
+
+      lottie.loadAnimation({
+        container: document.getElementById('lottie-womanAndScreen'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'images/ilustra_mjo.json'
+      });
+
+      lottie.loadAnimation({
+        container: document.getElementById('lottie-manWithGrafics'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'images/ilustra_antonio.json'
+      });
+    </script>
   </body>
 </html>
