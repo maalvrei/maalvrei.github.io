@@ -34,12 +34,30 @@ html {
   font-size: 28px;
 }
 
+@font-face {
+  font-family: poppins;
+  src: url(./fuentes/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: poppinsBold;
+  src: url(./fuentes/Poppins/Poppins-ExtraBold.ttf);
+}
+
+.poppins {
+  font-family: poppins, sans-serif;
+  font-size: 28px;
+}
+
+
+
 body {
-  margin: 0;
-  padding: 0;
+  width: 1920px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   min-height: 100vh;
 }
 
@@ -119,6 +137,7 @@ main {
 
 #principalTitle {
   font-size: 2rem;
+  font-family: poppinsBold, sans-serif;
 }
 
 h2 {
@@ -139,7 +158,9 @@ p {
 
 #button1 {
   background-color: #ea5a4c;
-  width: 90px;
+  width: 197px;
+  height: 58px;
+  font-size: 30px;
   border-radius: 15px;
   color: white;
   padding: 5px 10px;
